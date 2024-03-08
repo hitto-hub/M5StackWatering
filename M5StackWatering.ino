@@ -229,10 +229,9 @@ void loop() {
   );
   M5.Lcd.fillScreen(BLACK);
   M5.Lcd.setCursor(0, 0, 2);
-  // M5.Lcd.println(now);
-  M5.Lcd.println("ADC: " + String(rawADC));
-  M5.Lcd.print("battery");
-  M5.Lcd.println(M5.Axp.GetBatVoltage());
+  M5.Lcd.println(now);
+  M5.Lcd.print("ADC: " + String(rawADC));
+  Serial.println(M5.Axp.GetBatVoltage());
   // 0.9秒単位
   delay(900);
   rawADC = analogReadMilliVolts(INPUT_PIN);
@@ -246,9 +245,6 @@ void loop() {
       delay(1000);
     }
     Serial.println("OFF");
-  }
-  if (timeInfo.tm_hour == 10 && timeInfo.tm_min == 00 && timeInfo.tm_sec == 0) {
-    watering();
   }
   if (timeInfo.tm_min % 30 == 0 && timeInfo.tm_sec == 0) {
     sendData();
