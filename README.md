@@ -26,3 +26,9 @@ URLを設定してください。
 3. 水やりしたい植物の土にセンサーを刺す
 4. ポンプのホースをうまい具合に接続する
 5. 植物に名前をつける
+
+## Related Repositories
+
+- [Watering-Discord-Bot](https://github.com/hitto-hub/Watering-discord-bot)
+- [Watering-M5Stack](https://github.com/hitto-hub/M5StackWatering) (this repository)
+- [Watering-Back](https://github.com/hitto-hub/Watering-back)
